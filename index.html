@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="flex items-center justify-center bg-gray-900 min-h-screen">
+
+    <div id="countdown-setup" class="bg-gray-800 p-6 rounded-lg hidden">
+        <h1 class="text-white font-bold text-3xl text-center mb-4">Countdown Timer</h1>
+        <label class="text-white text-lg block mb-2">Select Target Time:</label>
+        <input id="input-target" class="bg-white w-full p-2 rounded mb-4" type="datetime-local">
+        <label class="text-white text-lg block mb-2">Custom Message (Optional):</label>
+        <input id="input-message" class="bg-white w-full p-2 rounded mb-4" type="text">
+        <button id="start-btn" class="bg-blue-500 px-4 py-2 rounded text-white">Start Countdown</button>
+    </div>
+
+    <div id="countdown" class="hidden">
+        <h1 id="countdown-message" class="text-center text-5xl font-bold text-white mb-3">Until:</h1>
+        <h1 id="countdown-timer" class=" text-center mx-auto bg-gray-800 font-mono text-green-500 text-8xl py-3 px-6 rounded-lg w-fit">00:00:00:00</h1>
+    </div>
+</body>
+
+<script src="countdown-timer.js"></script>
+
+</html>
